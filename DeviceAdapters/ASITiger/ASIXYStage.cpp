@@ -270,6 +270,13 @@ int CXYStage::Initialize()
    AddAllowedValue(g_JoystickRotatePropertyName, g_YesState);
    UpdateProperty(g_JoystickRotatePropertyName);
 
+   // change polarity of X axis movement/position
+   pAct = new CPropertyAction (this, &CXYStage::OnAxisMirrorX);
+   CreateProperty(g_AxisMirrorXPropertyName, g_NoState, MM::String, false, pAct);
+   AddAllowedValue(g_AxisMirrorXPropertyName, g_NoState);
+   AddAllowedValue(g_AxisMirrorXPropertyName, g_YesState);
+   UpdateProperty(g_AxisMirrorXPropertyName);
+
    // joystick enable/disable
    pAct = new CPropertyAction (this, &CXYStage::OnJoystickEnableDisable);
    CreateProperty(g_JoystickEnabledPropertyName, g_YesState, MM::String, false, pAct);

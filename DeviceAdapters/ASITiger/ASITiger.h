@@ -249,6 +249,7 @@ const char* const g_TTLinName = "TTLinMode";  // for integer-valued property
 const char* const g_TTLoutName = "TTLoutMode";// for integer-valued property
 const char* const g_TTLInputModeName = "TTLInputMode";  // for string-valued property
 const char* const g_TTLOutputModeName = "TTLOutputMode";// for string-valued property
+const char* const g_AxisMirrorXPropertyName = "AxisMirrorX";
 // Z stage property names
 const char* const g_StepSizePropertyName = "StepSize(um)";
 const char* const g_LowerLimPropertyName =  "LowerLim(mm)";
